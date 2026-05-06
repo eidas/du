@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>du — Disk Usage Tool</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 3rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.5rem; }
+    .dl { display: flex; gap: 1rem; margin: 2rem 0; }
+    a.btn {
+      display: inline-block; padding: .6rem 1.2rem;
+      background: #0969da; color: #fff; border-radius: 6px;
+      text-decoration: none; font-weight: 600;
+    }
+    a.btn:hover { background: #0550ae; }
+    pre { background: #f6f8fa; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>du — Disk Usage Tool</h1>
+  <p>Linux の du コマンドの Windows/Linux 向け CLI ツールです。</p>
+
+  <h2>ダウンロード</h2>
+  <div class="dl">
+    <a class="btn" href="du-windows-x86_64.exe">Windows (x86_64)</a>
+    <a class="btn" href="du-linux-x86_64">Linux (x86_64)</a>
+  </div>
+
+  <h2>使い方</h2>
+  <pre>du [OPTIONS] [PATH]
+
+Options:
+  -d, --depth &lt;N&gt;      表示する階層の深さを制限
+  -H, --human-readable  KB/MB/GB 単位で表示
+  -s, --summarize       合計サイズのみ表示
+  -h, --help            ヘルプを表示
+
+Examples:
+  du .                       カレントディレクトリを再帰的に表示
+  du -H -d 2 C:\Users        深さ2まで人間が読みやすい形式で表示
+  du -s D:\Projects          合計サイズのみ表示</pre>
+</body>
+</html>
